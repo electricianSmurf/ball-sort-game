@@ -1,0 +1,8 @@
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\bin\Release\ball sort game.exe.config
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\bin\Release\ball sort game.exe
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\bin\Release\ball sort game.pdb
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball_sort_game.Form1.resources
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball_sort_game.Properties.Resources.resources
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball sort game.csproj.GenerateResource.Cache
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball sort game.exe
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball sort game.pdb

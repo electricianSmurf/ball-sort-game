@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ball sort game", "ball sort game\ball sort game.csproj", "{47ED77F0-3002-4402-B17D-A076865954FB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{C7C72C0A-BF4A-4E7E-AF4A-1485756AF260}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47ED77F0-3002-4402-B17D-A076865954FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47ED77F0-3002-4402-B17D-A076865954FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47ED77F0-3002-4402-B17D-A076865954FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47ED77F0-3002-4402-B17D-A076865954FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C72C0A-BF4A-4E7E-AF4A-1485756AF260}.Debug|Any CPU.ActiveCfg = Debug
+		{C7C72C0A-BF4A-4E7E-AF4A-1485756AF260}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\bin\Debug\ball sort game.exe.config
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\bin\Debug\ball sort game.exe
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\bin\Debug\ball sort game.pdb
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.csprojResolveAssemblyReference.cache
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball_sort_game.Form1.resources
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball_sort_game.Properties.Resources.resources
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.csproj.GenerateResource.Cache
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.exe
+C:\Users\Yücel\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.pdb
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\bin\Debug\ball sort game.exe.config
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\bin\Debug\ball sort game.exe
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\bin\Debug\ball sort game.pdb
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball_sort_game.Form1.resources
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball_sort_game.Properties.Resources.resources
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.csproj.GenerateResource.cache
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.exe
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.pdb
+C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.csprojResolveAssemblyReference.cache
