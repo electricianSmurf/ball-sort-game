@@ -9,6 +9,8 @@ Player clicks bottle or one of the balls in the bottle with mouse's left click. 
 Hope you enjoy! :)
 
 IMAGES
+
+
 ![Screenshot_1](https://user-images.githubusercontent.com/77590545/107747570-ae943500-6d28-11eb-88a4-a3a710740b10.png)
 ![Screenshot_2](https://user-images.githubusercontent.com/77590545/107747579-b2c05280-6d28-11eb-80c3-932d976d15d6.png)
 ![Screenshot_3](https://user-images.githubusercontent.com/77590545/107747588-b653d980-6d28-11eb-82e3-c908b0cd9744.png)
