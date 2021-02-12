@@ -3,7 +3,7 @@
  
 DESCRIPTION
 
-There are 16 colours whic is also max level. The game starts at level 3. Round numbers count from 1 to the current level number. When the player finishes the game at level 16 and round 16 the game restarts from level 3 again. There's no game over, no time and click limit. 
+There are 16 colours whic is also max level. The game starts at level 3. Round numbers count from 1 to the current level number. When the player finishes the game at level 16 and round 16 the game restarts from level 3 again. There's no game over, no time and click limit.
 
 GAME PLAY
 
