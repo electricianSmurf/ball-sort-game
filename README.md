@@ -1,5 +1,5 @@
 # ball-sort-game
- It's a simple ball sorting game by ball colour.
+ It's a simple ball sorting game by ball colour. If you want to stop playing in the middle of the game, you would close it and it saves bottle & ball info into a JSON object and when you want to resume game, it automatically starts the game from where you stayed.
  
 DESCRIPTION
 
