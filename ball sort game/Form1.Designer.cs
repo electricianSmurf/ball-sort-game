@@ -54,10 +54,12 @@
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Visible = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // ball_mover
             // 
+            this.ball_mover.Enabled = true;
             this.ball_mover.Tick += new System.EventHandler(this.ball_mover_Tick);
             // 
             // btnClose

@@ -16,3 +16,15 @@ C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball
 C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.exe
 C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.pdb
 C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Debug\ball sort game.csprojResolveAssemblyReference.cache
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\bin\Debug\ball sort game.exe.config
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\bin\Debug\ball sort game.exe
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\bin\Debug\ball sort game.pdb
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\bin\Debug\Newtonsoft.Json.dll
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\bin\Debug\Newtonsoft.Json.xml
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball_sort_game.Form1.resources
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball_sort_game.Properties.Resources.resources
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball sort game.csproj.GenerateResource.cache
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball sort game.csproj.CoreCompileInputs.cache
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball sort game.csproj.CopyComplete
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball sort game.exe
+C:\Users\R\Source\Repos\electricianSmurf\ball-sort-game\ball sort game\obj\Debug\ball sort game.pdb

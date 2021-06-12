@@ -8,10 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+using Newtonsoft.Json;
+
 namespace ball_sort_game
 {
     public partial class Form1 : Form
     {
+        cBottleObj bottleProperties;
+        cBallObj ballProperties;
+        List<cBottleObj> listBottleObjects;
+
         int numberOfBottlesToBeProduced;
         int round;
         int filledBottleCount = 0;
@@ -21,6 +28,7 @@ namespace ball_sort_game
         int clickCounter = 0;
         bool firstClick, secondClick;
         bool secondMoveAllowed = false;
+        bool isRoundNew;
         PictureBox movingBall;
         PictureBox targetBottle;
         Random rnd = new Random();
@@ -37,55 +45,113 @@ namespace ball_sort_game
             InitializeComponent();
             fillColourList();
         }
+
         void fillColourList()
         {
             //15 colours
-            colors_lst.Add(Properties.Resources.red);
-            colors_lst.Add(Properties.Resources.black);
-            colors_lst.Add(Properties.Resources.yellow);
-            colors_lst.Add(Properties.Resources.brown);
-            colors_lst.Add(Properties.Resources.purple);
-            colors_lst.Add(Properties.Resources.white);
-            colors_lst.Add(Properties.Resources.green);
-            colors_lst.Add(Properties.Resources.blue);
-            colors_lst.Add(Properties.Resources.pink);
-            colors_lst.Add(Properties.Resources.orange);
-            colors_lst.Add(Properties.Resources.maroon);
-            colors_lst.Add(Properties.Resources.silver);
-            colors_lst.Add(Properties.Resources.gold);
-            colors_lst.Add(Properties.Resources.gray);
-            colors_lst.Add(Properties.Resources.cyan);
+            colors_lst.Add(Properties.Resources.red);// 0
+            colors_lst.Add(Properties.Resources.black);// 1
+            colors_lst.Add(Properties.Resources.yellow);// 2
+            colors_lst.Add(Properties.Resources.brown);// 3
+            colors_lst.Add(Properties.Resources.purple);// 4
+            colors_lst.Add(Properties.Resources.white);// 5
+            colors_lst.Add(Properties.Resources.green);// 6
+            colors_lst.Add(Properties.Resources.blue);// 7
+            colors_lst.Add(Properties.Resources.pink);// 8
+            colors_lst.Add(Properties.Resources.orange);// 9
+            colors_lst.Add(Properties.Resources.maroon);// 10
+            colors_lst.Add(Properties.Resources.silver);// 11
+            colors_lst.Add(Properties.Resources.gold);// 12
+            colors_lst.Add(Properties.Resources.gray);// 13
+            colors_lst.Add(Properties.Resources.cyan);// 14
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             getSettings();
+            if (!isRoundNew)
+            {
+                startGame();
+            }
         }
+
         private void getSettings()
         {
             numberOfBottlesToBeProduced = Properties.Settings.Default.level;
             round = Properties.Settings.Default.cycle;
+            isRoundNew = Properties.Settings.Default.isRoundNew;
+            
+            btnStart.Visible = false;
+            if (isRoundNew)
+            {
+                btnStart.Visible = true;
+            }
         }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
             btnStart.Visible = false;
-            saveSettings();
+
+            startGame();
+
+            Properties.Settings.Default.isRoundNew = false;
+            Properties.Settings.Default.Save();
+        }
+
+        private void startGame()
+        {
             for (int i = 0; i < numberOfBottlesToBeProduced; i++)
             {
                 produceBottle(i);
             }
-
-            selectRandomColors();
-            alignBallColoursAtLevel();
             
-            //now mix our list completely randomly
-            listBallColoursAtLevel = listBallColoursAtLevel.OrderBy(a => Guid.NewGuid()).ToList();
-
-            placeProducedBallsIntoBottles();
-
             round++;
+
+            if (isRoundNew)
+            {
+                selectRandomColors();
+                alignBallColoursAtLevel();
+
+                //now mix our list completely randomly
+                listBallColoursAtLevel = listBallColoursAtLevel.OrderBy(a => Guid.NewGuid()).ToList();
+
+                placeProducedBallsIntoBottles();
+
+            }
+            else
+            {
+                string path = validateFolderPath() + @"\bottles.json";
+                StreamReader reader = new StreamReader(path);
+                string jsonData = reader.ReadToEnd();
+                List<cBottleObj> bottleObjsJson = JsonConvert.DeserializeObject<List<cBottleObj>>(jsonData);
+                
+                for (int bottleNumber = 0; bottleNumber < bottleObjsJson.Count; bottleNumber++)
+                {
+                    for (int ballNumber = 0; ballNumber < bottleObjsJson[bottleNumber].listBottleObjBalls.Count; ballNumber++)
+                    {
+                        PictureBox PBox = new PictureBox();
+                        PBox.BackColor = Color.Transparent;
+                        PBox.Image = colors_lst[bottleObjsJson[bottleNumber].listBottleObjBalls[ballNumber].ballObjColour];
+                        PBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        PBox.Click += pb_Click;
+                        PBox.Size = new Size(22, 22);
+                        PBox.Name = "ball";
+                        
+                        PBox.Location = bottleObjsJson[bottleNumber].listBottleObjBalls[ballNumber].ballObjLoc;
+                        Controls.Add(PBox);
+
+                        list2dBallsInBottles[bottleNumber].Add(PBox);
+                        allPBoxes.Add(PBox);
+                        PBox.BringToFront();
+                    }
+                }
+            }
+            
             levelInfo.Text = "Level: " + numberOfBottlesToBeProduced.ToString() + " / 16, Round: " + round.ToString() + " / " + numberOfBottlesToBeProduced.ToString();
+            
             ball_mover.Start();
         }
+
         private void saveSettings()
         {
             Properties.Settings.Default.level = numberOfBottlesToBeProduced;
@@ -94,6 +160,8 @@ namespace ball_sort_game
                 Properties.Settings.Default.level = 3;
             }
             Properties.Settings.Default.cycle = round;
+            
+            Properties.Settings.Default.isRoundNew = isRoundNew;
             Properties.Settings.Default.Save();
         }
         void produceBottle(int bottleNumber)
@@ -431,6 +499,8 @@ namespace ball_sort_game
             checkRound();
             checkLevel();
 
+            isRoundNew = true;
+            saveSettings();
             btnStart.Visible = true;
         }
         void removeAllPBoxes()
@@ -489,7 +559,80 @@ namespace ball_sort_game
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!btnStart.Visible)
+            {
+                createBottleObj();
+                createJsonObject();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please press start first!");
+            }
+        }
+
+        void createBottleObj()
+        {
+            listBottleObjects = new List<cBottleObj>();
+            for (int bottleNumb = 0; bottleNumb < numberOfBottlesToBeProduced; bottleNumb++)
+            {
+                bottleProperties = new cBottleObj();
+
+                bottleProperties.listBottleObjBalls = new List<cBallObj>();
+                
+                if (list2dBallsInBottles[bottleNumb].Count != 0)
+                {
+                    for (int ballNumb = 0; ballNumb < list2dBallsInBottles[bottleNumb].Count; ballNumb++)
+                    {
+                        bottleProperties.listBottleObjBalls.Add(createBallObj(bottleNumb, ballNumb));
+                    }
+                }
+                
+                listBottleObjects.Add(bottleProperties);
+            }
+        }
+
+        cBallObj createBallObj(int bottleNumb, int ballNumb)
+        {
+            ballProperties = new cBallObj();
+            
+            ballProperties.ballObjLoc = list2dBallsInBottles[bottleNumb][ballNumb].Location;
+            ballProperties.ballObjColour = colors_lst.IndexOf(list2dBallsInBottles[bottleNumb][ballNumb].Image);
+
+            return ballProperties;
+        }
+        
+       void createJsonObject()
+        {
+            string jsonResult = JsonConvert.SerializeObject(listBottleObjects);
+            string path = validateFolderPath() + @"\bottles.json";
+            
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
+            using (var write = new StreamWriter(path, true))
+            {
+                write.WriteLine(jsonResult.ToString());
+                write.Close();
+            }
+        }
+
+        private string validateFolderPath()
+        {
+            string folderPath = AppDomain.CurrentDomain.BaseDirectory + @"\properties\";
+
+            try
+            {
+                if (!Directory.Exists(folderPath))
+                {
+                    DirectoryInfo directory = Directory.CreateDirectory(folderPath);
+                }
+            }
+            catch (Exception){}
+
+            return folderPath;
         }
 
         private void btnMinimise_Click(object sender, EventArgs e)

@@ -6,3 +6,15 @@ C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ba
 C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball sort game.csproj.GenerateResource.Cache
 C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball sort game.exe
 C:\Users\R\Desktop\VStudio projects\ball sort game\ball sort game\obj\Release\ball sort game.pdb
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\bin\Release\ball sort game.exe.config
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\bin\Release\ball sort game.exe
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\bin\Release\ball sort game.pdb
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\bin\Release\Newtonsoft.Json.dll
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\bin\Release\Newtonsoft.Json.xml
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball_sort_game.Form1.resources
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball_sort_game.Properties.Resources.resources
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball sort game.csproj.GenerateResource.cache
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball sort game.csproj.CoreCompileInputs.cache
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball sort game.csproj.CopyComplete
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball sort game.exe
+C:\Users\R\source\repos\electricianSmurf\ball-sort-game\ball sort game\obj\Release\ball sort game.pdb
